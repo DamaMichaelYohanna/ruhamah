@@ -42,7 +42,7 @@ TEMPLATES = [{
 }]
 WSGI_APPLICATION = "ruhamah.wsgi.application"
 LANGUAGE_CODE = "en-gb"
-TIME_ZONE = "Africa/Lagos"
+TIME_ZONE = "Europe/Warsaw"
 USE_I18N = True
 USE_TZ = True
 STATIC_URL = "static/"

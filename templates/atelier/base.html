@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f4eee8">
 
   <title>{% block title %}RUHAMAH — Elegance in Every Detail{% endblock %}</title>
-  <meta name="description" content="{% block meta_description %}RUHAMAH — contemporary womenswear shaped by craftsmanship, individuality and timeless elegance. Lagos · Est. with intention.{% endblock %}">
-  <meta name="keywords" content="RUHAMAH, contemporary womenswear, Nigerian fashion, bespoke tailoring, Lagos fashion designer, corporate wear, African heritage fashion">
+  <meta name="description" content="{% block meta_description %}RUHAMAH — contemporary womenswear shaped by craftsmanship, individuality and timeless elegance. Lublin, Poland · Est. with intention.{% endblock %}">
+  <meta name="keywords" content="RUHAMAH, contemporary womenswear, bespoke tailoring, Lublin fashion, Poland fashion designer, corporate wear, African heritage fashion">
   <meta name="author" content="Juliet Akoh, RUHAMAH">
   <meta name="robots" content="index, follow">
 
@@ -19,7 +19,7 @@
   <meta property="og:site_name" content="RUHAMAH">
   <meta property="og:locale" content="en_GB">
   <meta property="og:title" content="{% block og_title %}RUHAMAH — Contemporary Womenswear | Elegance in Every Detail{% endblock %}">
-  <meta property="og:description" content="{% block og_description %}Discover contemporary womenswear shaped by craftsmanship, individuality and timeless elegance. Bespoke tailoring, corporate edits, and cultural heritage designs from Lagos.{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}Discover contemporary womenswear shaped by craftsmanship, individuality and timeless elegance. Bespoke tailoring, corporate edits, and cultural heritage designs based in Lublin, Poland.{% endblock %}">
   <meta property="og:url" content="{% if request.build_absolute_uri %}{{ request.build_absolute_uri }}{% else %}https://ruhamah-wear.vercel.app/{% endif %}">
   <meta property="og:image" content="{% block og_image %}{% if request.scheme %}{{ request.scheme }}://{{ request.get_host }}{% else %}https://ruhamah-wear.vercel.app{% endif %}{% static 'atelier/images/og-image.jpg' %}{% endblock %}">
   <meta property="og:image:secure_url" content="{% block og_image_secure %}{% if request.scheme %}{{ request.scheme }}://{{ request.get_host }}{% else %}https://ruhamah-wear.vercel.app{% endif %}{% static 'atelier/images/og-image.jpg' %}{% endblock %}">
@@ -31,7 +31,7 @@
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% block twitter_title %}RUHAMAH — Contemporary Womenswear | Elegance in Every Detail{% endblock %}">
-  <meta name="twitter:description" content="{% block twitter_description %}Discover contemporary womenswear shaped by craftsmanship, individuality and timeless elegance. Bespoke tailoring, corporate edits, and cultural heritage designs from Lagos.{% endblock %}">
+  <meta name="twitter:description" content="{% block twitter_description %}Discover contemporary womenswear shaped by craftsmanship, individuality and timeless elegance. Bespoke tailoring, corporate edits, and cultural heritage designs based in Lublin, Poland.{% endblock %}">
   <meta name="twitter:image" content="{% block twitter_image %}{% if request.scheme %}{{ request.scheme }}://{{ request.get_host }}{% else %}https://ruhamah-wear.vercel.app{% endif %}{% static 'atelier/images/og-image.jpg' %}{% endblock %}">
   <meta name="twitter:image:alt" content="{% block twitter_image_alt %}RUHAMAH Contemporary Womenswear Editorial{% endblock %}">
 
@@ -47,7 +47,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <aside class="side-rail" aria-label="Brand"><a href="{% url 'home' %}" class="rail-logo"><img src="/static/atelier/images/ruhamah-brand-logo.png" alt="Ruhamah Wears brand logo"></a><span class="rail-rule"></span><span class="rail-note">CONTEMPORARY WOMENSWEAR</span><span class="rail-index">LAGOS · EST. WITH INTENTION</span></aside>
+  <aside class="side-rail" aria-label="Brand"><a href="{% url 'home' %}" class="rail-logo"><img src="/static/atelier/images/ruhamah-brand-logo.png" alt="Ruhamah Wears brand logo"></a><span class="rail-rule"></span><span class="rail-note">CONTEMPORARY WOMENSWEAR</span><span class="rail-index">LUBLIN · EST. WITH INTENTION</span></aside>
   <div class="page-shell">
     <header class="site-header">
       <a class="wordmark" href="{% url 'home' %}" aria-label="Ruhamah Wears home"><img src="/static/atelier/images/ruhamah-brand-logo.png" alt="Ruhamah Wears"></a>
