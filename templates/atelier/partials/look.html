@@ -1,0 +1,3 @@
+<button class="look-image {{ look.size|default:'' }}" type="button" data-lightbox data-caption="{{ look.caption }}" aria-label="View {{ look.caption }}">
+  <img src="{{ look.image }}" alt="{{ look.alt }}" loading="lazy"><span class="image-credit">{{ look.caption }} <span>↗</span></span>
+</button>
