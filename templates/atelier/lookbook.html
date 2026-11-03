@@ -1,3 +1,10 @@
-{% extends 'atelier/base.html' %}{% block title %}Lookbook — RUHAMAH{% endblock %}{% block content %}
+{% extends 'atelier/base.html' %}
+{% block title %}Lookbook — RUHAMAH{% endblock %}
+{% block meta_description %}Explore the RUHAMAH Lookbook — studies in silhouette, form, and texture designed by Juliet Akoh.{% endblock %}
+{% block og_title %}Lookbook — RUHAMAH | Studies in Style{% endblock %}
+{% block og_description %}A living lookbook of RUHAMAH designs: refined corporate tailoring, contemporary wear, and African heritage silhouettes.{% endblock %}
+{% block twitter_title %}Lookbook — RUHAMAH | Studies in Style{% endblock %}
+{% block twitter_description %}A living lookbook of RUHAMAH designs: refined corporate tailoring, contemporary wear, and African heritage silhouettes.{% endblock %}
+{% block content %}
 <section class="page-intro section-pad"><span class="eyebrow">THE RUHAMAH LOOKBOOK</span><h1>Studies in<br><em>style.</em></h1><p>A growing gallery of Juliet's work. Select an image to see it in full.</p></section>
 <section class="lookbook-page-grid section-pad">{% for look in looks %}{% include 'atelier/partials/look.html' %}{% endfor %}</section>{% endblock %}

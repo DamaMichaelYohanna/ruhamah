@@ -1,10 +1,47 @@
 {% load static %}<!doctype html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4eee8"><meta name="description" content="RUHAMAH — contemporary womenswear shaped by craftsmanship, individuality and timeless elegance.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4eee8">
+
   <title>{% block title %}RUHAMAH — Elegance in Every Detail{% endblock %}</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="description" content="{% block meta_description %}RUHAMAH — contemporary womenswear shaped by craftsmanship, individuality and timeless elegance. Lagos · Est. with intention.{% endblock %}">
+  <meta name="keywords" content="RUHAMAH, contemporary womenswear, Nigerian fashion, bespoke tailoring, Lagos fashion designer, corporate wear, African heritage fashion">
+  <meta name="author" content="Juliet Akoh, RUHAMAH">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{% if request.build_absolute_uri %}{{ request.build_absolute_uri }}{% else %}https://ruhamah-wear.vercel.app/{% endif %}">
+
+  <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RUHAMAH">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="{% block og_title %}RUHAMAH — Contemporary Womenswear | Elegance in Every Detail{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}Discover contemporary womenswear shaped by craftsmanship, individuality and timeless elegance. Bespoke tailoring, corporate edits, and cultural heritage designs from Lagos.{% endblock %}">
+  <meta property="og:url" content="{% if request.build_absolute_uri %}{{ request.build_absolute_uri }}{% else %}https://ruhamah-wear.vercel.app/{% endif %}">
+  <meta property="og:image" content="{% block og_image %}{% if request.scheme %}{{ request.scheme }}://{{ request.get_host }}{% else %}https://ruhamah-wear.vercel.app{% endif %}{% static 'atelier/images/og-image.jpg' %}{% endblock %}">
+  <meta property="og:image:secure_url" content="{% block og_image_secure %}{% if request.scheme %}{{ request.scheme }}://{{ request.get_host }}{% else %}https://ruhamah-wear.vercel.app{% endif %}{% static 'atelier/images/og-image.jpg' %}{% endblock %}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{% block og_image_alt %}RUHAMAH Contemporary Womenswear Editorial{% endblock %}">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% block twitter_title %}RUHAMAH — Contemporary Womenswear | Elegance in Every Detail{% endblock %}">
+  <meta name="twitter:description" content="{% block twitter_description %}Discover contemporary womenswear shaped by craftsmanship, individuality and timeless elegance. Bespoke tailoring, corporate edits, and cultural heritage designs from Lagos.{% endblock %}">
+  <meta name="twitter:image" content="{% block twitter_image %}{% if request.scheme %}{{ request.scheme }}://{{ request.get_host }}{% else %}https://ruhamah-wear.vercel.app{% endif %}{% static 'atelier/images/og-image.jpg' %}{% endblock %}">
+  <meta name="twitter:image:alt" content="{% block twitter_image_alt %}RUHAMAH Contemporary Womenswear Editorial{% endblock %}">
+
+  <!-- Favicons and Brand Icons -->
+  <link rel="icon" type="image/png" href="{% static 'atelier/images/ruhamah-brand-logo.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'atelier/images/ruhamah-brand-logo.png' %}">
+
+  <!-- Typography & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'atelier/css/site.css' %}">
 </head>

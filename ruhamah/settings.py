@@ -8,6 +8,7 @@ DEBUG = os.getenv("DEBUG", "True").lower() in ("true", "1", "yes")
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
+    "testserver",
     ".vercel.app",
     "ruhamah-wear.vercel.app",
 ]
