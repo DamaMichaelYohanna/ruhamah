@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4eee8">
+  <meta name="theme-color" content="#ffffff">
 
   <title>{% block title %}RUHAMAH — Elegance in Every Detail{% endblock %}</title>
   <meta name="description" content="{% block meta_description %}RUHAMAH — contemporary womenswear shaped by craftsmanship, individuality and timeless elegance. Lublin, Poland · Est. with intention.{% endblock %}">
@@ -53,7 +53,11 @@
       <a class="wordmark" href="{% url 'home' %}" aria-label="Ruhamah Wears home"><img src="/static/atelier/images/ruhamah-brand-logo.png" alt="Ruhamah Wears"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
       <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
-        <a href="{% url 'home' %}">Home</a><a href="{% url 'collections' %}">Collections</a><a href="{% url 'story' %}">Our story</a><a href="{% url 'bespoke' %}">Bespoke</a><a href="{% url 'contact' %}">Contact</a>
+        <a href="{% url 'home' %}"{% if request.resolver_match.url_name == 'home' %} class="is-active" aria-current="page"{% endif %}>Home</a>
+        <a href="{% url 'collections' %}"{% if request.resolver_match.url_name == 'collections' %} class="is-active" aria-current="page"{% endif %}>Collections</a>
+        <a href="{% url 'story' %}"{% if request.resolver_match.url_name == 'story' %} class="is-active" aria-current="page"{% endif %}>Our story</a>
+        <a href="{% url 'bespoke' %}"{% if request.resolver_match.url_name == 'bespoke' %} class="is-active" aria-current="page"{% endif %}>Bespoke</a>
+        <a href="{% url 'contact' %}"{% if request.resolver_match.url_name == 'contact' %} class="is-active" aria-current="page"{% endif %}>Contact</a>
       </nav><span class="header-edition">A HOUSE OF QUIET CONFIDENCE</span>
     </header>
     <main id="main">{% block content %}{% endblock %}</main>
