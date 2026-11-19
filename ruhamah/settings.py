@@ -11,6 +11,9 @@ ALLOWED_HOSTS = [
     "testserver",
     ".vercel.app",
     "ruhamah-wear.vercel.app",
+    ".ruhamahwears.org",
+    "ruhamahwears.org",
+    "www.ruhamahwears.org",
 ]
 
 env_allowed_hosts = os.getenv("ALLOWED_HOSTS")
@@ -20,6 +23,9 @@ if env_allowed_hosts:
 CSRF_TRUSTED_ORIGINS = [
     "https://*.vercel.app",
     "https://ruhamah-wear.vercel.app",
+    "https://*.ruhamahwears.org",
+    "https://ruhamahwears.org",
+    "https://www.ruhamahwears.org",
 ]
 
 env_csrf_origins = os.getenv("CSRF_TRUSTED_ORIGINS")
