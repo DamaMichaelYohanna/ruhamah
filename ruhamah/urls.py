@@ -11,6 +11,8 @@ urlpatterns = [
     path("bespoke/", views.bespoke, name="bespoke"),
     path("contact/", views.contact, name="contact"),
     path("404/", views.custom_404, name="preview_404"),
+    path("sitemap.xml", views.sitemap, name="sitemap"),
+    path("robots.txt", views.robots, name="robots"),
 ]
 
 handler404 = "atelier.views.custom_404"

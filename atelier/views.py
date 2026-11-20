@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 LOOKS = [
     {"image": "/static/atelier/images/african-heritage.jpg", "caption": "A STUDY IN PRINT · 01", "alt": "Juliet wearing a pink and white patterned dress", "size": "look-tall"},
@@ -37,4 +38,14 @@ def contact(request):
 
 def custom_404(request, exception=None):
     return render(request, "404.html", status=404)
+
+
+def sitemap(request):
+    xml = render(request, "sitemap.xml")
+    return HttpResponse(xml.content, content_type="application/xml")
+
+
+def robots(request):
+    txt = render(request, "robots.txt")
+    return HttpResponse(txt.content, content_type="text/plain")
 
