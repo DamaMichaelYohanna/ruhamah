@@ -1280,6 +1280,110 @@ button {
 }
 
 /* ==========================================================================
+   404 Dedicated Page (Editorial Lost in the Atelier)
+   ========================================================================== */
+
+.error-page {
+  min-height: calc(100vh - 91px);
+  padding-top: 80px;
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 8%;
+  align-items: center;
+  background: var(--white);
+}
+
+.error-copy {
+  max-width: 560px;
+}
+
+.error-code {
+  display: inline-block;
+  font: 300 clamp(76px, 9vw, 130px) / 0.82 var(--serif);
+  color: var(--purple-accent);
+  letter-spacing: -0.04em;
+  margin-bottom: 8px;
+}
+
+.error-copy h1 {
+  font: 400 clamp(52px, 6.5vw, 86px) / 0.9 var(--serif);
+  letter-spacing: -0.035em;
+  margin: 10px 0 24px;
+  color: var(--ink);
+}
+
+.error-copy h1 em {
+  color: var(--purple-accent);
+  font-style: italic;
+}
+
+.error-intro {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 450px;
+  margin-bottom: 34px;
+}
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+}
+
+.error-actions .button-link {
+  background: var(--purple-deep);
+  color: #ffffff;
+  border: 1px solid var(--purple-deep);
+}
+
+.error-actions .button-link:hover {
+  background: var(--purple-accent);
+  color: #ffffff;
+  border-color: var(--purple-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(42, 12, 54, 0.22);
+}
+
+.error-secondary-links {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.error-photo {
+  height: 540px;
+  position: relative;
+  background: var(--purple-mist);
+  margin: 0;
+}
+
+.error-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.error-photo figcaption {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 8px;
+  letter-spacing: 0.13em;
+  color: var(--muted);
+}
+
+/* ==========================================================================
    Lightbox
    ========================================================================== */
 
@@ -1415,6 +1519,16 @@ button {
   }
   .bespoke-page-photo {
     height: 470px;
+  }
+  .error-page {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  .error-photo {
+    height: 380px;
+    max-width: 520px;
   }
 }
 
@@ -1807,6 +1921,32 @@ button {
   }
   .lightbox img {
     max-width: calc(92vw - 24px);
+  }
+  .error-page {
+    min-height: 0;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    gap: 32px;
+  }
+  .error-code {
+    font-size: clamp(64px, 16vw, 96px);
+  }
+  .error-copy h1 {
+    font-size: clamp(44px, 11vw, 64px);
+    margin: 8px 0 18px;
+  }
+  .error-intro {
+    font-size: 12px;
+    margin-bottom: 26px;
+  }
+  .error-photo {
+    height: 320px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .error-secondary-links {
+    flex-direction: column;
+    gap: 12px;
   }
 }
 

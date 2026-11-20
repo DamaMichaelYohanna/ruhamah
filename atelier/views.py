@@ -33,3 +33,8 @@ def bespoke(request):
 
 def contact(request):
     return render(request, "atelier/contact.html")
+
+
+def custom_404(request, exception=None):
+    return render(request, "404.html", status=404)
+
